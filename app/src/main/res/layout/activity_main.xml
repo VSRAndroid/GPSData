@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="5"
+    tools:context=".activity.HomeActivity">
+
+    <fragment
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_weight="4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="1">
+
+       <TextView
+           android:id="@+id/descriptionText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/rider_desc"
+           android:textSize="18sp"
+           android:gravity="center"
+           android:padding="5dp"
+           android:background="@color/colorPrimary"/>
+
+       <TextView
+           android:id="@+id/timerText"
+           android:layout_below="@+id/descriptionText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="5dp"
+           android:textStyle="bold"
+           android:textSize="18sp"
+           android:padding="5dp"
+           android:textColor="@color/colorPrimaryDark"/>
+
+       <LinearLayout
+           android:layout_below="@+id/timerText"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:weightSum="2"
+           android:orientation="horizontal">
+
+           <Button
+               android:id="@+id/start_btn"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:text="@string/start"
+               android:layout_weight="1"/>
+
+           <Button
+               android:id="@+id/history_btn"
+               android:layout_width="0dp"
+               android:layout_margin="10dp"
+               android:layout_height="wrap_content"
+               android:text="@string/history"
+               android:layout_weight="1"/>
+
+       </LinearLayout>
+
+   </RelativeLayout>
+
+</LinearLayout>

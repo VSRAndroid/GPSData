@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Zypp</string>
+    <string name="start">Start</string>
+    <string name="history">History</string>
+    <string name="rider_desc">Rider Description</string>
+    <string name="end_ride">End Ride</string>
+</resources>
